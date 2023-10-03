@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    width: 100%;
+    height: 99vh;
+    background-image: url(/backgound-img/coffee_image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &>.content {
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &>.cont h2 {
+            color: white;
+            font-family: Clicker Script;
+            font-size: 35px;
+        }
+
+        &>.cont2 ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            &>li a {
+                text-decoration: none;
+                color: white;
+                padding: 0 10px;
+            }
+        }
+
+        &>.cont3 {
+            display: flex;
+            align-items: center;
+
+            &>.con {
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                padding: 0 10px;
+            }
+
+            &>.con2 {
+                &>.but {
+                    width: 100px;
+                    height: 48px;
+                    border-radius: 27px;
+                    background-color: #F9C06A;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &>.content2 {
+        width: 1000px;
+        margin: 0 120px;
+
+        &>p {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 22px;
+        }
+
+        &>h2 {
+            font-size: 220px;
+            font-family: Clicker Script;
+            color: #FFFFFF;
+            font-weight: 300;
+        }
+
+        &>h5 {
+            font-size: 22px;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 10px 0;
+        }
+
+        &>.but2 {
+            width: 134px;
+            height: 48px;
+            background-color: #F9C06A;
+            border: none;
+            border-radius: 37px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 18px;
+        }
+    }
+}
+
+
+
+//   kofee ischib bolgandan keyingi satr
+
+
+
+.container2 {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &>.content {
+        margin: 0 80px;
+
+        &>h2 {
+            color: var(--coffee, #603809);
+            font-family: Playfair Display;
+            font-size: 54px;
+        }
+
+        &>p {
+            color: #707070;
+            font-family: Playfair Display;
+            font-size: 20px;
+            padding: 15px 0;
+        }
+
+        &>.but3 {
+            width: 134px;
+            height: 48px;
+            background-color: #F9C06A;
+            font-family: Playfair Display;
+            border-radius: 37px;
+            border: none;
+        }
+    }
+}
+
+
+
+
+
+// uchinchi loyiha
+
+
+
+
+
+
+.container3 {
+    width: 100%;
+    height: 90vh;
+
+    &>.content {
+        text-align: center;
+
+        &>h2 {
+            color: var(--coffee, #603809);
+            font-family: Playfair Display;
+            font-size: 54px;
+        }
+
+        &>p {
+            color: #707070;
+            text-align: center;
+            font-family: Playfair Display;
+        }
+    }
+
+    &>.content2 {
+        &>.cont {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 40px;
+
+            &>.con {
+                width: 280px;
+                height: 364px;
+                border: 1px solid rgba(249, 192, 106, 0.42);
+                background: #FFF9F1;
+                ;
+                text-align: center;
+
+                &>h3 {
+                    color: var(--coffee, #603809);
+                    font-family: Playfair Display;
+                    font-size: 24px;
+                    padding: 10px 0;
+                }
+
+                &>p {
+                    color: #1E1E1E;
+                    font-family: Playfair Display;
+                    font-size: 18px;
+                }
+
+                &>h5 {
+                    color: var(--coffee, #603809);
+                    font-family: Playfair Display;
+                    font-size: 20px;
+
+                    &>span {
+                        font-size: 16px;
+                    }
+                }
+
+                &>.but4 {
+                    width: 134px;
+                    height: 48px;
+                    background-color: #F9C06A;
+                    font-family: Playfair Display;
+                    border-radius: 37px;
+                    border: none;
+                    font-size: 17px;
+                    margin: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// To'rtinchi loyixa
+
+
+
+
+
+.container4 {
+    width: 100%;
+    height: 70vh;
+
+    &>.content {
+        text-align: center;
+
+        &>h2 {
+            color: var(--coffee, #603809);
+            font-family: Playfair Display;
+            font-size: 54px;
+        }
+
+        &>p {
+            color: #707070;
+            text-align: center;
+            font-family: Playfair Display;
+            padding: 10px 0;
+        }
+    }
+
+    &>.content2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 40px;
+
+        &>.cont {
+            width: 280px;
+            height: 284px;
+            border: 1px solid rgba(249, 192, 106, 0.42);
+            background-color: #FFF9F1;
+            text-align: center;
+            padding: 40px 0;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+
+            &>h2 {
+                color: var(--coffee, #603809);
+                font-family: Playfair Display;
+                font-size: 28px;
+                padding: 10px 0;
+            }
+
+            &>p {
+                color: #707070;
+                text-align: center;
+                font-family: Playfair Display;
+                font-size: 20px;
+            }
+        }
+
+        &>.cont:hover {
+            transition: 0.3s ease-in-out;
+            background: #FFEED8;
+        }
+    }
+}
+
+// Kichik navbar tegi
+.navbar {
+    text-align: center;
+    width: 100%;
+    height: 20vh;
+    margin: 20px 0;
+
+    &>p {
+        color: #707070;
+        text-align: center;
+        font-family: Playfair Display;
+        font-size: 20px;
+    }
+
+    &>h2 {
+        color: var(--coffee, #603809);
+        font-family: Playfair Display;
+        font-size: 30px;
+    }
+
+    &>.but5 {
+        width: 134px;
+        height: 48px;
+        border-radius: 24px;
+        background: #F9C06A;
+        border: none;
+        margin: 10px 0;
+        font-size: 17px;
+    }
+}
