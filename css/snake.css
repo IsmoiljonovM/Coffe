@@ -1,0 +1,204 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #1c120d;
+    --surface: #2b1c14;
+    --board: #3a271c;
+    --accent: #f9c06a;
+    --text: #fdf3e7;
+    --muted: #c9b6a3;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.snake-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.brand {
+    font-family: "Clicker Script", cursive;
+    font-size: 32px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+    text-decoration: underline;
+}
+
+.snake-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 16px 40px;
+}
+
+h1 {
+    font-family: "Clicker Script", cursive;
+    font-weight: 400;
+    font-size: clamp(48px, 10vw, 72px);
+    color: var(--accent);
+    line-height: 1;
+}
+
+.subtitle {
+    color: var(--muted);
+    text-align: center;
+    max-width: 420px;
+}
+
+.scoreboard {
+    display: flex;
+    gap: 12px;
+}
+
+.score-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 88px;
+    padding: 8px 16px;
+    background: var(--surface);
+    border-radius: 12px;
+}
+
+.score-box .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+.score-box .value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+}
+
+.board-wrap {
+    position: relative;
+    width: min(480px, 92vw);
+    aspect-ratio: 1;
+}
+
+#board {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 16px;
+    background: var(--board);
+    box-shadow: 0 0 0 4px var(--surface), 0 20px 40px rgba(0, 0, 0, 0.4);
+    touch-action: none;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px;
+    text-align: center;
+    background: rgba(28, 18, 13, 0.82);
+    border-radius: 16px;
+}
+
+.overlay[hidden] {
+    display: none;
+}
+
+.overlay h2 {
+    font-size: 28px;
+}
+
+.overlay p {
+    color: var(--muted);
+}
+
+.play-btn {
+    margin-top: 8px;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--bg);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.play-btn:hover {
+    transform: translateY(-2px);
+}
+
+.play-btn:focus-visible,
+.ctrl:focus-visible {
+    outline: 3px solid var(--text);
+    outline-offset: 3px;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, 56px);
+    grid-template-rows: repeat(3, 56px);
+    gap: 8px;
+    grid-template-areas:
+        ". up ."
+        "left pause right"
+        ". down .";
+}
+
+.ctrl {
+    border: none;
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.ctrl:active {
+    background: var(--board);
+}
+
+.ctrl.up { grid-area: up; }
+.ctrl.down { grid-area: down; }
+.ctrl.left { grid-area: left; }
+.ctrl.right { grid-area: right; }
+.ctrl.pause { grid-area: pause; font-size: 16px; }
+
+@media (hover: hover) and (pointer: fine) {
+    .controls {
+        display: none;
+    }
+}

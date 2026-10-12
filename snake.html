@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1c120d">
+    <meta name="description" content="Bean Snake — guide the snake, eat coffee beans, and grow longer.">
+    <link rel="stylesheet" href="./css/snake.css">
+    <link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
+    <title>Bean Snake | Bean Scene</title>
+</head>
+
+<body>
+    <header class="snake-header">
+        <a href="./index.html" class="brand">Bean Scene</a>
+        <a href="./index.html" class="back-link">Back to home</a>
+    </header>
+
+    <main class="snake-main">
+        <h1>Bean Snake</h1>
+        <p class="subtitle">Eat the coffee beans, grow longer, and don&apos;t bite your own tail.</p>
+
+        <div class="scoreboard" aria-live="polite">
+            <div class="score-box">
+                <span class="label">Score</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <div class="score-box">
+                <span class="label">Length</span>
+                <span class="value" id="length">3</span>
+            </div>
+            <div class="score-box">
+                <span class="label">Best</span>
+                <span class="value" id="best">0</span>
+            </div>
+        </div>
+
+        <div class="board-wrap">
+            <canvas id="board" width="480" height="480" aria-label="Snake game board" role="img"></canvas>
+            <div class="overlay" id="overlay">
+                <h2 id="overlay-title">Ready to brew?</h2>
+                <p id="overlay-text">Use arrow keys or WASD to move. Space to pause.</p>
+                <button class="play-btn" id="play-btn" type="button">Start Game</button>
+            </div>
+        </div>
+
+        <div class="controls" aria-label="Touch controls">
+            <button type="button" class="ctrl up" data-dir="up" aria-label="Move up">&#9650;</button>
+            <button type="button" class="ctrl left" data-dir="left" aria-label="Move left">&#9664;</button>
+            <button type="button" class="ctrl pause" id="pause-btn" aria-label="Pause or resume">II</button>
+            <button type="button" class="ctrl right" data-dir="right" aria-label="Move right">&#9654;</button>
+            <button type="button" class="ctrl down" data-dir="down" aria-label="Move down">&#9660;</button>
+        </div>
+    </main>
+
+    <script src="./js/snake.js"></script>
+</body>
+
+</html>
